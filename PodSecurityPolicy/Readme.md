@@ -7,6 +7,7 @@ Pod Security Admission
 - v1.23 onwards enabled by default
 - For v 1.22 - enabled manually
 
+
 Ex
 apiVersion: v1
 kind: Namespace
@@ -16,6 +17,9 @@ metadata:
 	#pod-security.kubernetes.io/<MODE> = <LEVEL>
 	 pod-security.kubernetes.io/enforce: privileged
 
+
+
+Pod Security Modes
 
  ![image](https://github.com/Ashish-Goel007/My-Private-repo/assets/35141714/c1de5c64-0008-4dab-86d8-5d334fa4979a)
 
