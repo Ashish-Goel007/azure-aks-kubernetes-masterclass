@@ -40,12 +40,15 @@ Pod Security Admission
 ![image](https://github.com/Ashish-Goel007/azure-aks-kubernetes-masterclass/assets/35141714/13c43dd8-214b-4e12-843e-b1c22c9ff6e8)
 
 **10. Privileged Level**
+
 ![image](https://github.com/Ashish-Goel007/azure-aks-kubernetes-masterclass/assets/35141714/6faf97d2-24cb-4955-b85b-b7b8a79ddc8b)
 
 **11. Baseline Level**
+
 ![image](https://github.com/Ashish-Goel007/azure-aks-kubernetes-masterclass/assets/35141714/cafd67b4-9685-4d89-b4b2-aec50601bd21)
 
 **12. Restricted Level**
+
 ![image](https://github.com/Ashish-Goel007/azure-aks-kubernetes-masterclass/assets/35141714/bf093d67-c7e2-4734-8645-6837a9609128)
 
 
