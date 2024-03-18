@@ -91,3 +91,16 @@ Restricted Policy - The Restricted policy is aimed at enforcing current Pod hard
 3. Containers must not set runAsUser to 0
 4. Seccomp profile must be explicitly set to one of the allowed values. Both the Unconfined profile and the absence of a profile are prohibited. This is Linux only policy in v1.25+ (spec.os.name != windows)
 5. Containers must drop ALL capabilities, and are only permitted to add back the NET_BIND_SERVICE capability. This is Linux only policy in v1.25+ (.spec.os.name != "windows")
+
+   Important Notes-
+
+   1. Applying baseline level to a namepsace
+   ![image](https://github.com/Ashish-Goel007/azure-aks-kubernetes-masterclass/assets/35141714/b1d942d7-478d-427f-ae9f-1a188747fa93)
+
+   2. Getting Error when try to create privileged pod on namepsace where baseline is enforced
+  	![image](https://github.com/Ashish-Goel007/azure-aks-kubernetes-masterclass/assets/35141714/336d7361-565b-4722-88dd-d9912594dbe6)
+
+   3. Two same modes (like /enforce) cannot be applied at a time
+      ![image](https://github.com/Ashish-Goel007/azure-aks-kubernetes-masterclass/assets/35141714/776a992a-a564-4e6c-b534-8275f85b8ab7)
+
+   4.  Applying baseline level to a pod
