@@ -1,3 +1,8 @@
+WHY Pod Security Admission ?
+
+Pod security policies can be applied on all pods in a cluster whereas 
+Pod Security Admission can be applied at cluster or at namespace or pod level.
+
 INTRODUCTION
 
 Pod Security Admission 
