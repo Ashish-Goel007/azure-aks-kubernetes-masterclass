@@ -103,4 +103,8 @@ Restricted Policy - The Restricted policy is aimed at enforcing current Pod hard
    3. Two same modes (like /enforce) cannot be applied at a time
       ![image](https://github.com/Ashish-Goel007/azure-aks-kubernetes-masterclass/assets/35141714/776a992a-a564-4e6c-b534-8275f85b8ab7)
 
-   4.  Applying baseline level to a pod
+   4.  Applying baseline level to a pod, Admission Webhook Configuration needs to be created first followed by the creation of Deployment & service.
+      ![image](https://github.com/Ashish-Goel007/azure-aks-kubernetes-masterclass/assets/35141714/0a0e58a1-8418-4849-8b6d-13dcd8f2f6c4)
+
+   5. YAML NAMESPACE
+      ![image](https://github.com/Ashish-Goel007/azure-aks-kubernetes-masterclass/assets/35141714/f7e5b982-f5b9-4b72-a4bc-387da4898670)
