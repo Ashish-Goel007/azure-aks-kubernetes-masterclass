@@ -52,4 +52,37 @@ Pod Security Admission
 ![image](https://github.com/Ashish-Goel007/azure-aks-kubernetes-masterclass/assets/35141714/bf093d67-c7e2-4734-8645-6837a9609128)
 
 
+****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
 
+
+The Privileged policy is purposely-open, and entirely unrestricted.
+
+Baseline Policy - The Baseline policy is aimed at ease of adoption for common containerized workloads while preventing known privilege escalations. 
+1. Windows pods offer the ability to run HostProcess containers which enables privileged access to the Windows node. Privileged access to the host is disallowed in the baseline policy.
+2. Sharing the host namespaces must be disallowed.
+3. Privileged Pods disable most security mechanisms and must be disallowed.
+4. Adding additional capabilities beyond those listed below must be disallowed.
+5. HostPath volumes must be forbidden.
+6. HostPorts should be disallowed entirely (recommended) or restricted to a known list
+7. On supported hosts, the runtime/default AppArmor profile is applied by default. The baseline policy should prevent overriding or disabling the default AppArmor profile, or restrict overrides to an allowed set of profiles.
+8. Setting the SELinux type is restricted, and setting a custom SELinux user or role option is forbidden.
+9. The default /proc masks are set up to reduce attack surface, and should be required.
+10. Seccomp profile must not be explicitly set to Unconfined.
+11. Sysctls can disable security mechanisms or affect all containers on a host, and should be disallowed except for an allowed "safe" subset. A sysctl is considered safe if it is namespaced in the container or the Pod, and it is isolated from other Pods or processes on the same Node.
+
+
+
+Restricted Policy - The Restricted policy is aimed at enforcing current Pod hardening best practices, at the expense of some compatibility
+1. The restricted policy only permits the following volume types.
+	spec.volumes[*].configMap
+	spec.volumes[*].csi
+	spec.volumes[*].downwardAPI
+	spec.volumes[*].emptyDir
+	spec.volumes[*].ephemeral
+	spec.volumes[*].persistentVolumeClaim
+	spec.volumes[*].projected
+	spec.volumes[*].secret
+2. Containers must be required to run as non-root users.
+3. Containers must not set runAsUser to 0
+4. Seccomp profile must be explicitly set to one of the allowed values. Both the Unconfined profile and the absence of a profile are prohibited. This is Linux only policy in v1.25+ (spec.os.name != windows)
+5. Containers must drop ALL capabilities, and are only permitted to add back the NET_BIND_SERVICE capability. This is Linux only policy in v1.25+ (.spec.os.name != "windows")
