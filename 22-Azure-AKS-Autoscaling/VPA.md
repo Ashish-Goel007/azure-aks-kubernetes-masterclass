@@ -32,15 +32,24 @@ spec:
 
 **Explanation of the Manifest Fields**
 **apiVersion**: Specifies the API version for the VPA. For VPA, it's typically autoscaling.k8s.io/v1.
+
 **kind**: Specifies the kind of the Kubernetes object; in this case, it's VerticalPodAutoscaler.
+
 **metadata**: Contains metadata about the VPA object, such as name and namespace.
+
 **spec**: The specification of the VPA:
-**targetRef**: References the Kubernetes object you want to autoscale. It includes the API version, the kind (like Deployment, StatefulSet), and the name of the object.
-**updatePolicy**: Specifies how the VPA should apply the resource requirement recommendations. Auto mode means it will automatically update the pod's resource requests as needed.
+
+  **targetRef**: References the Kubernetes object you want to autoscale. It includes the API version, the kind (like Deployment, StatefulSet), and the name of the object.
+  
+  **updatePolicy**: Specifies how the VPA should apply the resource requirement recommendations. Auto mode means it will automatically update the pod's resource requests as needed.
+
 **resourcePolicy**: Defines the resource policy constraints:
-**containerPolicies**: List of policies applicable to specific containers or all containers ('*').
-**minAllowed and maxAllowed**: Define the minimum and maximum resource limits for CPU and memory.
-**controlledResources**: Specifies which resources (CPU and/or memory) are controlled by VPA.
+
+  **containerPolicies**: List of policies applicable to specific containers or all containers ('*').
+  
+  **minAllowed and maxAllowed**: Define the minimum and maximum resource limits for CPU and memory.
+  
+  **controlledResources**: Specifies which resources (CPU and/or memory) are controlled by VPA.
 
 **Steps to Apply This Manifest**
 
