@@ -1,7 +1,14 @@
 To set up a Vertical Pod Autoscaler (VPA) in Kubernetes, you need to have the VPA component installed in your cluster. 
+
+        git clone https://github.com/kubernetes/autoscaler.git
+        cd autoscaler
+        ./vertical-pod-autoscaler/hack/vpa-up.sh
+        kubectl get vpa
+
 The VPA provides recommendations for the optimal resource limits (CPU and memory) for the pods 
-and can also automatically apply these recommendations. Below is a sample YAML manifest for a Vertical Pod Autoscaler that targets
-a specific deployment.
+and can also automatically apply these recommendations. 
+
+Below is a sample YAML manifest for a Vertical Pod Autoscaler that targets a specific deployment.
 
 VPA also uses the metrics server to capture CPU in a similar way as HPA.
 
