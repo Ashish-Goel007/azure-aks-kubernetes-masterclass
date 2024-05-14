@@ -9,10 +9,12 @@ VPA also uses the metrics server to capture CPU in a similar way as HPA.
 
 
 Update Mode
-        Auto - Apply the recommendaations suggested by VPA directly by updating the pods. (pods will be restarted)
-        Off - VPA gives the recommendations but wont update the replicas (preferred in prod since pods are not restarted in 
-        this case)
-        Initial - It applies the recommended values only to the newly created pods.
+
+**Auto** - Apply the recommendaations suggested by VPA directly by updating the pods. (pods will be restarted)
+
+**Off** - VPA gives the recommendations but wont update the replicas (preferred in prod since pods are not restarted in this case). We can send this recommendation to grafana & apply this in next deployment cycle.
+        
+**Initial** - It applies the recommended values only to the newly created pods.
 
 **Sample VPA Manifest**
 Here's a simple example of a VPA configuration that automatically adjusts CPU and memory requests for the pods managed by a deployment named **example-deployment**:
