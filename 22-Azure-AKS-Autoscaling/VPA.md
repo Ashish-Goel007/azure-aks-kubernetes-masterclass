@@ -5,6 +5,14 @@ a specific deployment.
 
 VPA also uses the metrics server to capture CPU in a similar way as HPA.
 
+![image](https://github.com/Ashish-Goel007/azure-aks-kubernetes-masterclass/assets/35141714/12449273-6d17-42de-bee0-6a436eec30eb)
+
+
+Update Mode
+Auto - Apply the recommendaations suggested by VPA directly by updating the pods.
+Off - VPA gives the recommendations but wont update the replicas
+Initial - It applies the recommended values only to the newly created pods.
+
 **Sample VPA Manifest**
 Here's a simple example of a VPA configuration that automatically adjusts CPU and memory requests for the pods managed by a deployment named **example-deployment**:
 
@@ -19,7 +27,7 @@ spec:
     kind: Deployment
     name: example-deployment
   updatePolicy:
-    updateMode: "Auto"
+    updateMode: "Auto" 
   resourcePolicy:
     containerPolicies:
       - containerName: '*'
