@@ -119,3 +119,5 @@ az group delete -n ${RESOURCE_GROUP}
 
 ## Referencess
 - [Azure AKS - Horizontal Pod Autoscaler](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-scale#autoscale-pods)
+
+- ![image](https://github.com/Ashish-Goel007/azure-aks-kubernetes-masterclass/assets/35141714/f1b59f4c-4309-4a02-bf95-75f94b0d2c19)
