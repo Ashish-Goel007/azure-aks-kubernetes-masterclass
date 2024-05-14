@@ -11,6 +11,7 @@
 
 [![Image](https://stacksimplify.com/course-images/azure-kubernetes-service-autoscaling-hpa-2.png "Azure AKS Kubernetes - Masterclass")](https://stacksimplify.com/course-images/azure-kubernetes-service-autoscaling-hpa-2.png)
 
+![image](https://github.com/Ashish-Goel007/azure-aks-kubernetes-masterclass/assets/35141714/9961cf61-4059-46c6-8881-ecbda5e7d12d)
 
 ## Step-02: Review Deploy our Application
 ```
