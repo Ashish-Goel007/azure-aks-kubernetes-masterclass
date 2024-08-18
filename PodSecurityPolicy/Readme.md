@@ -4,11 +4,12 @@ https://www.youtube.com/watch?v=JYM7mSShfp0&t=2245s
 
 ## WHY Pod Security Admission ?
 
-Pod security policies can be applied on all pods in a cluster whereas 
+Pod security policies (deprecated in 1.21 & removed in 1.25) can be applied on all pods in a cluster whereas 
+
 Pod Security Admission can be applied at cluster or at namespace or pod level.
 
 ## INTRODUCTION - Pod Security Admission 
-
+- **Pod Security** is one of the admission controller.
 - Restriction can be applied at namespace level using labels.
 - Restrictions can be applied at cluster level as well using AdmissionConfigFile.
 	- vi /etc/Kubernetes/manifest/kube-apiserver.yml 
@@ -21,6 +22,8 @@ Pod Security Admission can be applied at cluster or at namespace or pod level.
 
 
 ## 1. How Admission Controller works ?
+
+- 30 in build admission controllers
 ![image](https://github.com/Ashish-Goel007/azure-aks-kubernetes-masterclass/assets/35141714/d2db4842-0d3f-400c-af02-e3b7ebada4d4)
 
 ## 2. restriction at Namespace level
